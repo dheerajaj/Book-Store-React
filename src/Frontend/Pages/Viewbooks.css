@@ -1,0 +1,158 @@
+/* CSS for the BooksSection component */
+.container {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(19, 206, 172, 0.453);
+  padding: 20px;
+  width: calc(33.33% - 20px);
+  /* Adjust the width for responsiveness */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.book-card:hover {
+  transform: scale(0.9);
+  filter: drop-shadow(0 2px 4px rgba(9, 204, 129, 0.651));
+  opacity: 1;
+}
+
+.book-name {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.book-language,
+.book-description,
+.book-price {
+  margin: 10px 0;
+  color: #666;
+}
+
+.book-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button.delete {
+  background-color: #dc3545;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .book-card {
+    width: calc(50% - 20px);
+  }
+
+  @media (max-width: 480px) {
+    .book-card {
+      width: 100%;
+    }
+  }
+}
+
+
+/* Update Form*/
+
+/* CSS for the Update Book Form */
+
+
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #333;
+}
+
+form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 400px;
+  left: 145px;
+  width: 27%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.296);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  margin-left: 441px;
+}
+
+/* Update form styles */
+
+.update-form {
+  background: transparent;
+  /* margin: 0 auto; */
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(208, 225, 27, 0.615);
+  text-align: center;
+  display: block;
+  margin-left: 441px;
+}
+
+.update {
+  color: white;
+}

@@ -1,0 +1,131 @@
+/* *{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0px;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #9cc9ff;
+    color: black;
+    display: flex;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10 !important;
+    box-shadow: 0 5px 15px burlywood(0,0%,46%,.25);
+}
+
+.navigation img {
+    width: 50px;
+    height: 50px;
+}
+.items{
+    column-gap: 7px;
+    display: flex;
+}
+.items Link {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.items Link:hover {
+    background-color:whitesmoke;
+    
+    color: #333;
+}
+.items{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border-right: none!important;
+    color: #333;
+    font-size: .9rem;
+    padding: 0.2rem 0.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.logo{
+    display: flex;
+} */
+
+/* Reset and basic styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font stack example */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navigation bar */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+   
+    color: black;
+    height: 8%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10 !important;
+    box-shadow: none;
+    
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.25);
+}
+
+.navigation img {
+    width: 30%;
+    height: 10%;
+}
+
+/* Navigation items */
+.items {
+    justify-content: center;
+    align-items: center;
+    column-gap: 7px;
+    display: flex;
+}
+
+.items a {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.items a:hover {
+    background-color: whitesmoke;
+    color: #333;
+    
+}
+
+  
+  /* Logo and image styling */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 50%;
+    height: 100%;
+   /* object-fit: cover;  This ensures the image scales correctly */
+   /* border-radius: 50%; /* Round the corners for a smooth blend */
+    margin-right: 10px; /* Add some spacing between the image and text */
+  }
+  
