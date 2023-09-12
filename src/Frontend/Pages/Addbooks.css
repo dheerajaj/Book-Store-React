@@ -1,49 +1,74 @@
-/* addbooks.css */
+/* AddBooks.css */
 
-.container {
-  margin-top: 120px;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  justify-content: space-evenly;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.input-field {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 10px;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.input-field:focus {
-  border-color: #007bff; 
-}
-
-.button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s step-start;
-}
-
-.button:hover {
-  background-color: #e1f40e; 
-}
-
-
-
+.container1 {
+    display: flex;
+    height: 75%;
+    width: 45%;
+    margin-top: 120px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(40, 184, 220, 0.1);
+    filter: drop-shadow(10px 8px 6px #427cc3);
+    margin-left: 28rem;
+  }
+  
+  .viewbook1 {
+    background-color: #007bff;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 30rem;
+    position: relative;
+    margin-left: 22rem;
+    text-decoration: none;
+    color: honeydew;
+    font-size: 24px;
+    padding: 5px;
+  }
+  
+  .form-group {
+   
+    max-width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    margin-left: 13rem;
+  }
+  
+  .book-name,
+  .book-author,
+  .book-genere,
+  .book-lang,
+  .book-description,
+  .book-price {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .form-group {
+      max-width: 90%;
+    }
+  }
+  

@@ -27,9 +27,8 @@ const Books = () => {
 
   return (
     <div className="container">
-      <div className="header">
-        <img src='https://drive.google.com/uc?id=1eRiJ_0m0wSvJ4DvaDboLLU-PadPPf9u_' alt='books'></img>
-      </div>
+    <img src='https://drive.google.com/uc?id=1eRiJ_0m0wSvJ4DvaDboLLU-PadPPf9u_' alt='books' className='Bbtn'></img>
+      
       {loading ? (
         <div className="loading">
           <BarLoader  className='load'  loading={loading} />

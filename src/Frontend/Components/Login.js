@@ -1,12 +1,16 @@
-import {React,  useState } from 'react';
+
+import React, { useState} from 'react';
 import axios from 'axios';
 import './Login.css';
+import { Link } from 'react-router-dom';
+
 
 function Login() {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
   });
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,27 +22,33 @@ function Login() {
 
   const headers = {
     'Content-Type': 'application/json',
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/login', formData, { headers });
+      const response = await axios.post('http://localhost:8000/api/v1/login', formData, { headers });
       alert(response.data.message);
-      // Handle successful login (e.g., store the token or session data)
+
+      if (response.data.success) {
+
+        
+       
+      }
     } catch (error) {
       alert('Login failed. Please try again.');
     }
   };
+
   
 
   return (
-    <div className='Log-form'>
-     
-      <form onSubmit={handleSubmit}>
+    <div className='log-div'>
+      <form className='log-form' onSubmit={handleSubmit}>
         <div>
-        <h2>Login</h2>
-          <input placeholder='Username'
+          <h2>Login</h2>
+          <input  className='log-user'
+            placeholder='Username'
             type="text"
             id="username"
             name="username"
@@ -47,8 +57,8 @@ function Login() {
           />
         </div>
         <div>
-          
-          <input placeholder='Password'
+          <input className='log-pass'
+            placeholder='Password'
             type="password"
             id="password"
             name="password"
@@ -56,7 +66,7 @@ function Login() {
             onChange={handleChange}
           />
         </div>
-        <button type="submit">Login</button>
+        <Link to='/home'> <button type="submit">Login</button> </Link>
       </form>
     </div>
   );

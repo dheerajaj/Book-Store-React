@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Registration.css';
+import { Link } from 'react-router-dom';
 
 function Registration() {
   const [formData, setFormData] = useState({
@@ -43,8 +44,8 @@ function Registration() {
     <div className="reg-form">
       <h1>Registration Page</h1>
       <br /><br />
-      <form onSubmit={handleSubmit}>
-        <input
+      <form onSubmit={handleSubmit} className='Rfome'>
+        <input className='user'
           placeholder='Name'
           type="text"
           id="name"
@@ -54,7 +55,7 @@ function Registration() {
           required
         /><br />
 
-        <input
+        <input className='user'
           placeholder='E-mail'
           type="email"
           id="email"
@@ -64,29 +65,18 @@ function Registration() {
           required
         /><br />
 
-        <input
-          placeholder='Password'
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        /><br />
+        <input className='user'
+          placeholder='Password'  type="password"  id="password"  name="password"  value={formData.password}  onChange={handleChange}  required /><br />
 
-        <input
-          placeholder='Confirm Password'
-          type="password"
-          id="confirmPassword"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          required
-        /><br />
+        <input  className='user'
+          placeholder='Confirm Password' type="password"  id="confirmPassword"  name="confirmPassword"  value={formData.confirmPassword} onChange={handleChange} required /><br />
 
         <button type="submit">Register</button>
       </form>
+      
       {message && <p>{message}</p>}
+      <p>Already a User?</p>
+      <Link to="/login"> Login</Link>
     </div>
   );
 }

@@ -29,19 +29,39 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ message: 'Error during login' });
   }
 });
-//Add User
+
+
 
 router.post('/register', async (req, res) => {
   try {
-    const formData = req.body;
-    const newUser = new userModel(formData);
+    const { username, email, password } = req.body;
+
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10); // You can adjust the saltRounds as needed
+
+    // Check if the username or email is already taken
+    const existingUser = await userModel.findOne({ $or: [{ username }, { email }] });
+    if (existingUser) {
+      return res.status(400).json({ message: 'Username or email is already in use' });
+    }
+
+    // Create a new user document with the hashed password
+    const newUser = new userModel({
+      username,
+      email,
+      password: hashedPassword,
+    });
+
+    // Save the new user to the database
     await newUser.save();
+
     res.status(200).json({ message: 'User registered successfully' });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Error registering user' });
   }
 });
+
 
 // Add a book
 router.post('/add', async (req, res) => {  

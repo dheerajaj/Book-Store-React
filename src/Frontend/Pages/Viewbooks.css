@@ -1,5 +1,5 @@
 /* CSS for the BooksSection component */
-.container {
+.container2 {
   margin-top: 5%;
   display: flex;
   flex-wrap: wrap;
@@ -30,17 +30,24 @@
   opacity: 1;
 }
 
-.book-name {
+.book-detail {
   font-size: 18px;
   margin: 0;
   color: #333;
+  margin: 10px 0;
+  
 }
 
-.book-language,
-.book-description,
-.book-price {
+.book-detail-n {
+  font-size: 18px;
+  margin: 0;
+  height: 12%;
+  color: #333;
   margin: 10px 0;
-  color: #666;
+  border: 1px solid rgb(24, 186, 222);
+  border-radius: 5px;
+  
+  
 }
 
 .book-buttons {
@@ -128,8 +135,8 @@ button[type="button"]:hover {
 .overlay {
   position: fixed;
   top: 400px;
-  left: 145px;
-  width: 27%;
+  left: -441px;
+  width: 21%;
   height: 40%;
   background-color: rgba(0, 0, 0, 0.296);
   display: flex;
@@ -156,3 +163,45 @@ button[type="button"]:hover {
 .update {
   color: white;
 }
+
+.Bnavigation {
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 10 !important;
+  box-shadow: none;
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.25);
+  margin-left: 71rem;
+  margin-top: 2rem;
+  width: 26rem;
+  opacity: .4;
+}
+
+.Bnavigation:hover{
+  opacity: 1;
+}
+.Bitems {
+  justify-content: center;
+  align-items: center;
+  column-gap: 7px;
+  display: flex;
+}
+
+.Bitems a {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.Bitems a:hover {
+  background-color: whitesmoke;
+  color: #333;
+  
+}
+

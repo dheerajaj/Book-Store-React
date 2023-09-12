@@ -1,6 +1,6 @@
 import './App.css';
 import Footer from './Frontend/Components/Footer';
-import Navbar from './Frontend/Components/Navbar';
+// import Navbar from './Frontend/Components/Navbar';
 import AddBooks from './Frontend/Pages/AddBooks';
 import Books from './Frontend/Pages/Books';
 import Home from './Frontend/Pages/Home';
@@ -12,12 +12,11 @@ function App() {
   return (
   
     <Router>
-      <Navbar/>
       
       <Routes>
       <Route path='/registration' exact element={<Registration></Registration>}></Route>
-      <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/'  element={<Home/>}/>
+      <Route index element={<Login></Login>}></Route>
+        <Route path='/home'  element={<Home/>}/>
         <Route path='/books' element={<Books/>}/>
         <Route path='/addbooks' element={<AddBooks/>}/>
       </Routes>

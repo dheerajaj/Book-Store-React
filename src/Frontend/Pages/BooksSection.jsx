@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Viewbooks.css';
-
+// import Navbar from '../Components/Navbar';
+import { Link } from 'react-router-dom';
 const UpdateBookForm = ({ bookId, onClose }) => {
   const [formData, setFormData] = useState({
     title: '',
@@ -11,7 +12,7 @@ const UpdateBookForm = ({ bookId, onClose }) => {
     description: '',
     genre: '',
     price: '',
-    
+
   });
 
 
@@ -27,19 +28,19 @@ const UpdateBookForm = ({ bookId, onClose }) => {
     try {
       await axios.put(`http://localhost:8000/api/v1/updateBook/${bookId}`, formData);
       alert('Book updated successfully');
-      onClose(); 
+      onClose();
     } catch (error) {
       console.error('Error updating book:', error);
       // Handle the error (e.g., show an error message to the user)
     }
   };
-  
+
 
   return (
     <div className={`update-form ${bookId ? 'overlay' : ''}`}>
       <h2 className='update'>Update Book</h2>
       <form>
-        <input type="text" name="title" placeholder="Title"  value={formData.title} onChange={handleChange}  />
+        <input type="text" name="title" placeholder="Title" value={formData.title} onChange={handleChange} />
         <input type="text" name="author"
           placeholder="Author"
           value={formData.author}
@@ -66,7 +67,7 @@ const UpdateBookForm = ({ bookId, onClose }) => {
           value={formData.genre}
           onChange={handleChange}
         />
-        
+
         <input
           type="number"
           name="price"
@@ -100,45 +101,58 @@ const BooksSection = ({ booksData }) => {
   };
 
   return (
-    <div className="container">
-      <div className="book-grid">
-        {booksData &&
-          booksData.map((item, index) => (
-            <div key={item._id} className="book-card">
-              <h6 className="book-name">{item.title}</h6>
-              <p className="book-language">Language: {item.language}</p>
-              <p className="book-description">Description: {item.description}</p>
-              <p className="book-price">Price : Rs. {item.price}</p>
-              
-              <div className="book-buttons">
-                <button
-                  className="button"
-                  onClick={() => {
-                    setSelectedBookId(item._id);
-                    setUpdateFormVisible(true);
-                  }}
-                >
-                  Update
-                </button>
-                <button className="button delete" onClick={() => handleDelete(item._id)}>
-                  Delete
-                </button>
-              </div>
-            </div>
-          ))}
-      </div>
+    <>
+      <nav className='Bnavigation'>
+        
+        <div className='Bitems'>
+          <Link className='Bdashboard' to="/home">Dashboard</Link>
+          <Link className='Baddbooks' to="/addbooks">Add Books</Link>
+          <Link className='Blogout' to="../Components/Login.js">LogOut</Link>
 
-      {isUpdateFormVisible && (
-        <div className="overlay">
-          <UpdateBookForm
-            bookId={selectedBookId}
-            onClose={() => setUpdateFormVisible(false)}
-          />
         </div>
-      )}
-    </div>
-  );
-};
+      </nav>
+      <div className="container2">
+        <div className="book-grid">
+          {booksData &&
+            booksData.map((item, index) => (
+              <div key={item._id} className="book-card">
+                <h6 className="book-detail-n">{item.title}</h6>
+                <p className="book-detail">Language: {item.language}</p>
+                <p className="book-detail">Description: {item.description}</p>
+                <p className="book-detail">Price : Rs. {item.price}</p>
 
+                <div className="book-buttons">
+                  <button
+                    className="button"
+                    onClick={() => {
+                      setSelectedBookId(item._id);
+                      setUpdateFormVisible(true);
+                    }}
+                  >
+                    Update
+                  </button>
+                  <button className="button delete" onClick={() => handleDelete(item._id)}>
+                    Delete
+                  </button>
+                </div>
+              </div>
+            ))}
+        </div>
+
+        {isUpdateFormVisible && (
+          <div className="overlay">
+            <UpdateBookForm
+              bookId={selectedBookId}
+              onClose={() => setUpdateFormVisible(false)}
+            />
+          </div>
+        )}
+      </div>
+    </>
+  );
+
+
+
+}
 export default BooksSection;
 
