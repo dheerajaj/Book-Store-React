@@ -42,9 +42,10 @@ function Registration() {
 
   return (
     <div className="reg-form">
-      <h1>Registration Page</h1>
+    <img className='reg-im' src='https://kcouk.org/ksims/resources/images/icons/registerStudent.svg' alt=''></img>
+      <h1 className='SignHead'>Sign Up</h1>
       <br /><br />
-      <form onSubmit={handleSubmit} className='Rfome'>
+      <form onSubmit={handleSubmit} >
         <input className='user'
           placeholder='Name'
           type="text"
@@ -76,7 +77,7 @@ function Registration() {
       
       {message && <p>{message}</p>}
       <p>Already a User?</p>
-      <Link to="/login"> Login</Link>
+      <Link className='loguser' to="/login"> Login</Link>
     </div>
   );
 }

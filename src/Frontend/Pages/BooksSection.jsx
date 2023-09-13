@@ -107,7 +107,7 @@ const BooksSection = ({ booksData }) => {
         <div className='Bitems'>
           <Link className='Bdashboard' to="/home">Dashboard</Link>
           <Link className='Baddbooks' to="/addbooks">Add Books</Link>
-          <Link className='Blogout' to="../Components/Login.js">LogOut</Link>
+          <Link className='Blogout' to="/">LogOut</Link>
 
         </div>
       </nav>

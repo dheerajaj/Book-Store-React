@@ -1,61 +1,91 @@
 /* Add this CSS to your project's stylesheet */
 .reg-form {
-    font-family: Arial, sans-serif;
-    max-width: 500px;
-    height: 60%;
-    margin: 0 auto;
-    margin-top: 120px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 2px 0 10px rgba(9, 235, 216, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  .Rfome{
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  height: 60%;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 2px 0 10px rgba(9, 235, 216, 0.1);
+}
 
-  }
-  .user{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+.reg-form:hover {
+  box-shadow: 5px 0 15px rgba(53, 222, 208, 0.845);
+}
 
-  
-  /* .user-name,
-  .user-mail,
-  .user-pass
-   {
-    width: 100%;
-    height: 50%;
-    color: black;
-  } */
-  
+.loguser {
 
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  text-align: center;
+
+  display: inline-block;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  height: 40px;
+  width: 20%;
+}
+
+.loguser:hover {
+  background-color: rgb(15, 217, 227);
+}
+
+.SignHead {
+  font-size: 2.3rem;
+  color: aqua;
+  text-align: center;
+}
+
+.SignHead:hover {
+  font-size: 2.56rem;
+  color: aquamarine;
+
+}
+.reg-im{
+  justify-content: center;
+  align-items: center;
+  margin-left:28% ;
+  height: 30%;
+  width: 40%;
+}
+.reg-im:hover{
+  margin-left:24% ;
+  height: 40%;
+  width: 50%;
+
+}
+
+.user {
+  width: 100%;
+  height: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 500px) {
+  .App {
+    max-width: 100%;
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Media query for responsiveness */
-  @media (max-width: 500px) {
-    .App {
-      max-width: 100%;
-    }
-  }
-  
+}

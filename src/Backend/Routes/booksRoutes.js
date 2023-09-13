@@ -5,7 +5,7 @@ const bookModel = require('../models/booksModels.js');
 const userModel = require('../models/usersModels.js');
 
 
-
+//Login
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
@@ -30,7 +30,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
+//Registration
 
 router.post('/register', async (req, res) => {
   try {
