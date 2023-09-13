@@ -52,16 +52,14 @@
   .log-pass:focus {
     border-color: #1de4cd;
   }
-  .log-image{
-    position: fixed;
-    transform: translate(-50%, -50%);
-    width: 15%;
-    margin-bottom: 80%;
-    margin-left: 20%;
+  .log-image:hover{
+  
+    box-shadow: 2px 8px 16px rgba(16, 236, 240, 0.675);
+   
   
   }
   
-.reguser {
+/* .reguser {
 
   text-align: center;
 
@@ -74,10 +72,15 @@
   transition: background-color 0.3s ease;
   height: 40px;
   width: 20%;
+} */
+.reguser{
+  color: red;
+  text-decoration: none;
 }
 
 .reguser:hover {
-  background-color: rgb(15, 217, 227);
+  font-style: italic;
+  font-size: 1rem;
 }
   
   /* Login button */
@@ -99,7 +102,7 @@
   }
   
   /* Responsive design */
-  @media (max-width: 768px) {
+  @media (max-width: 100%) {
     form {
       width: 100%;
       max-width: 100%;

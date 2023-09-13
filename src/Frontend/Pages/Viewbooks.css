@@ -1,4 +1,4 @@
-/* CSS for the BooksSection component */
+/* CSS for the BooksSection component 
 .container2 {
   margin-top: 5%;
   display: flex;
@@ -18,7 +18,7 @@
   box-shadow: 0 2px 4px rgba(19, 206, 172, 0.453);
   padding: 20px;
   width: calc(33.33% - 20px);
-  /* Adjust the width for responsiveness */
+  /* Adjust the width for responsiveness 
   box-sizing: border-box;
   margin-bottom: 20px;
   opacity: 0.7;
@@ -74,7 +74,7 @@
   background-color: #0056b3;
 }
 
-/* Media query for responsiveness */
+/* Media query for responsiveness 
 @media (max-width: 768px) {
   .book-card {
     width: calc(50% - 20px);
@@ -90,7 +90,7 @@
 
 /* Update Form*/
 
-/* CSS for the Update Book Form */
+/* CSS for the Update Book Form 
 
 
 h2 {
@@ -131,7 +131,7 @@ button[type="button"]:hover {
 }
 
 
-/* Overlay styles */
+/* Overlay styles 
 .overlay {
   position: fixed;
   top: 400px;
@@ -146,11 +146,11 @@ button[type="button"]:hover {
   margin-left: 441px;
 }
 
-/* Update form styles */
+/* Update form styles 
 
 .update-form {
   background: transparent;
-  /* margin: 0 auto; */
+  /* margin: 0 auto; 
   padding: 20px;
   width: 400px;
   border-radius: 8px;
@@ -204,4 +204,220 @@ button[type="button"]:hover {
   color: #333;
   
 }
+*/
 
+
+/* CSS for the BooksSection component */
+.container2 {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(19, 206, 172, 0.453);
+  padding: 20px;
+  width: calc(33.33% - 20px);
+  /* Adjust the width for responsiveness */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.book-card:hover {
+  transform: scale(0.9);
+  filter: drop-shadow(0 2px 4px rgba(9, 204, 129, 0.651));
+  opacity: 1;
+}
+
+.book-detail {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+  margin: 10px 0;
+}
+
+.book-detail-n {
+  font-size: 18px;
+  margin: 0;
+  height: 12%;
+  color: #333;
+  margin: 10px 0;
+  border: 1px solid rgb(24, 186, 222);
+  border-radius: 5px;
+}
+
+.book-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button.delete {
+  background-color: #dc3545;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .book-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container2 {
+    margin-top: 10%;
+  }
+
+  .book-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .book-card {
+    width: 100%;
+  }
+
+  .container2 {
+    margin-top: 15%;
+  }
+}
+
+/* Update Form */
+
+/* CSS for the Update Book Form */
+
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 400px;
+  left: -441px;
+  width: 21%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.296);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  margin-left: 441px;
+}
+
+/* Update form styles */
+
+.update-form {
+  background: transparent;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(208, 225, 27, 0.615);
+  text-align: center;
+  display: block;
+  margin-left: 441px;
+}
+
+.update {
+  color: white;
+}
+
+/* Navigation Styles */
+
+.Bnavigation {
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 10 !important;
+  box-shadow: none;
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.25);
+  margin-left: 71rem;
+  margin-top: 2rem;
+  width: 26rem;
+  opacity: .4;
+}
+
+.Bnavigation:hover {
+  opacity: 1;
+}
+
+.Bitems {
+  justify-content: center;
+  align-items: center;
+  column-gap: 7px;
+  display: flex;
+}
+
+.Bitems a {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.Bitems a:hover {
+  background-color: whitesmoke;
+  color: #333;
+}

@@ -4,14 +4,37 @@
     font-family: cursive;
 }
 
-.load{
+
+
+/* loader.css */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .custom-loader {
+    
     display: block;
     margin: 0 auto;
-    border-color: #007bff; /* Change the color to match your design */
+    border-color: red;
+  }
   
-}
 .Bbtn{
     width: 100%;
     height: 100%;
 
+}
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 24px; /* Adjust the font size for smaller screens */
+    }
+    .load {
+        max-width: 80%; /* Adjust the maximum width for smaller screens */
+    }
+    .Bbtn {
+        font-size: 16px; /* Adjust the font size for smaller screens */
+    }
 }

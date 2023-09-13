@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BooksSection from '../Pages/BooksSection';
-import { BarLoader } from 'react-spinners';
+
+import { ClipLoader } from "react-spinners";
 import './Books.css';
 
 const Books = () => {
@@ -22,7 +23,7 @@ const Books = () => {
     fetchData();
   }, []);
 
-  
+ 
     
 
   return (
@@ -30,9 +31,9 @@ const Books = () => {
     <img src='https://drive.google.com/uc?id=1eRiJ_0m0wSvJ4DvaDboLLU-PadPPf9u_' alt='books' className='Bbtn'></img>
       
       {loading ? (
-        <div className="loading">
-          <BarLoader  className='load'  loading={loading} />
-        </div>
+        <div className=".loader-container">
+        <ClipLoader className="custom-loader" loading={true}  size={80} />
+      </div>
       ) : (
         <BooksSection booksData={data} />
       )}

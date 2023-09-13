@@ -2,8 +2,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Viewbooks.css';
-// import Navbar from '../Components/Navbar';
 import { Link } from 'react-router-dom';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const UpdateBookForm = ({ bookId, onClose }) => {
   const [formData, setFormData] = useState({
     title: '',
@@ -27,17 +30,19 @@ const UpdateBookForm = ({ bookId, onClose }) => {
   const handleSubmit = async () => {
     try {
       await axios.put(`http://localhost:8000/api/v1/updateBook/${bookId}`, formData);
-      alert('Book updated successfully');
+      toast.success('Book updated successfully');
       onClose();
     } catch (error) {
-      console.error('Error updating book:', error);
+      toast.error('Error updating book:', error);
       // Handle the error (e.g., show an error message to the user)
     }
   };
 
 
   return (
+  
     <div className={`update-form ${bookId ? 'overlay' : ''}`}>
+    <ToastContainer></ToastContainer>
       <h2 className='update'>Update Book</h2>
       <form>
         <input type="text" name="title" placeholder="Title" value={formData.title} onChange={handleChange} />
@@ -93,9 +98,9 @@ const BooksSection = ({ booksData }) => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:8000/api/v1/deleteBook/${id}`);
-      alert('Deleted');
+      toast.success('Deleted');
     } catch (error) {
-      console.error('Error Deleting book:', error);
+      toast.error('Error Deleting book:', error);
       // Handle the error (e.g., show an error message to the user)
     }
   };
