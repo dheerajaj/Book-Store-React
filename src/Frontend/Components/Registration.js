@@ -77,7 +77,7 @@ function Registration() {
       
       {message && <p>{message}</p>}
       <p>Already a User?</p>
-      <Link className='loguser' to="/login"> Login</Link>
+      <Link className='loguser' to="/"> Login</Link>
     </div>
   );
 }
